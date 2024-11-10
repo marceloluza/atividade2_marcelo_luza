@@ -1,15 +1,17 @@
 <section>
   <header>
-    <h1>
-      Categoria: {{ categoria.nome }}
-    </h1>
+    <h1>Categoria: {{ categoria.nome }}</h1>
   </header>
 
   <main>
     <h2>Filmes:</h2>
     <div *ngFor="let filme of categoria.filmes" class="filme">
-      <span class="titulo">{{ filme.titulo }}</span>
-      <span class="ano">{{ filme.ano }}</span>
+      <img [src]="filme.capaUrl" alt="{{ filme.titulo }}" class="filme-capa" />
+      <div class="filme-info">
+        <h3 class="titulo">{{ filme.titulo }}</h3>
+        <p class="ano-diretor">{{ filme.ano }}, {{ filme.diretor }}</p>
+        <p class="genero">{{ filme.genero }}</p>
+      </div>
     </div>
   </main>
 </section>

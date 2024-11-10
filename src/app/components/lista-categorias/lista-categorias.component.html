@@ -1,6 +1,9 @@
-<button
-  *ngFor="let c of (categoriaService.categorias$ | async)"
-  (click)="categoriaService.selecionaCategoria(c)"
->
-  {{ c.nome }}
-</button>
+<div class="categoria-lista">
+  <button
+    *ngFor="let c of (categoriaService.categorias$ | async)"
+    (click)="categoriaService.selecionaCategoria(c)"
+    class="categoria-botao"
+  >
+    {{ c.nome }}
+  </button>
+</div>

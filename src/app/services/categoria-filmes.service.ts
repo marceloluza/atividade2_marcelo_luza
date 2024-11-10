@@ -23,7 +23,14 @@ export class CategoriaFilmesService {
     this.httpClient.get<ICategoria[]>('http://localhost:3000/api/categorias').pipe(
       map(categorias => categorias.map(c => new Categoria(
         c.nome,
-        c.filmes.map(f => new Filme(f.titulo, f.ano)),
+        c.filmes.map(f => new Filme(
+          f._id,
+          f.titulo,
+          f.ano,
+          f.diretor,
+          f.genero,
+          f.capaUrl   
+        ))
       ))),
     ).subscribe(this._categorias$);
   }

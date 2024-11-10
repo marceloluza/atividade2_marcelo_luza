@@ -1,0 +1,20 @@
+.categoria-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  max-width: 200px;
+}
+
+.categoria-botao {
+  background-color: #008080;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+}
+
+.categoria-botao:hover {
+  background-color: #005050;
+}
