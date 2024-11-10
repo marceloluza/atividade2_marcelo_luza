@@ -1,1 +1,15 @@
-<p>categoria works!</p>
+<section>
+  <header>
+    <h1>
+      Categoria: {{ categoria.nome }}
+    </h1>
+  </header>
+
+  <main>
+    <h2>Filmes:</h2>
+    <div *ngFor="let filme of categoria.filmes" class="filme">
+      <span class="titulo">{{ filme.titulo }}</span>
+      <span class="ano">{{ filme.ano }}</span>
+    </div>
+  </main>
+</section>

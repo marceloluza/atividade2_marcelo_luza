@@ -1,17 +1,17 @@
 <nav>
-  <app-lista-turmas></app-lista-turmas>
+  <app-lista-categorias></app-lista-categorias>
 </nav>
 
 <main>
-  @if (turmaService.turmaSelecionada$ | async; as t) {
-    <app-turma
-      [turma]="t"
+  @if (categoriaService.categoriaSelecionada$ | async; as c) {
+    <app-categoria
+      [categoria]="c"
     >
-    </app-turma>
+    </app-categoria>
   }
   @else {
-    Selecione uma turma para exibir.
+    Selecione uma categoria para exibir.
   }
 </main>
 
-<router-outlet />
+<router-outlet></router-outlet>

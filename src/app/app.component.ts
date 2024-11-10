@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import { ListaTurmasComponent } from "./components/lista-turmas/lista-turmas.component";
-import { TurmaComponent } from "./components/turma/turma.component";
-import { TurmaService } from './services/turma.service';
+import { ListaCategoriasComponent } from "./components/lista-categorias/lista-categorias.component";
+import { CategoriaComponent } from "./components/categoria/categoria.component";
+import { CategoriaFilmesService } from './services/categoria-filmes.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -12,12 +12,12 @@ import { CommonModule } from '@angular/common';
   imports: [
     RouterOutlet,
     CommonModule,
-    ListaTurmasComponent,
-    TurmaComponent,
+    ListaCategoriasComponent,
+    CategoriaComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  public turmaService = inject(TurmaService);
+  public categoriaService = inject(CategoriaFilmesService);
 }

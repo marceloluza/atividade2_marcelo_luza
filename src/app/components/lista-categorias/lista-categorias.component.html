@@ -1,1 +1,6 @@
-<p>lista-categorias works!</p>
+<button
+  *ngFor="let c of (categoriaService.categorias$ | async)"
+  (click)="categoriaService.selecionaCategoria(c)"
+>
+  {{ c.nome }}
+</button>

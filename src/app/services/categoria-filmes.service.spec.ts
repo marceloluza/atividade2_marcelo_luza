@@ -1,8 +1,7 @@
 import { TestBed } from '@angular/core/testing';
-
 import { CategoriaFilmesService } from './categoria-filmes.service';
 
-describe('CategoriaFilmesService', () => {
+describe('CategoriaService', () => {
   let service: CategoriaFilmesService;
 
   beforeEach(() => {

@@ -1,5 +1,5 @@
-export interface IAluno {
+export interface IFilme {
   _id: string;
-  codigo: number;
-  nome: string;
+  titulo: string;
+  ano: number;
 }

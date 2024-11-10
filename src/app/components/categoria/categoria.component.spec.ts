@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CategoriaComponent } from './categoria.component';
 
 describe('CategoriaComponent', () => {
