@@ -1,0 +1,17 @@
+<nav>
+  <app-lista-turmas></app-lista-turmas>
+</nav>
+
+<main>
+  @if (turmaService.turmaSelecionada$ | async; as t) {
+    <app-turma
+      [turma]="t"
+    >
+    </app-turma>
+  }
+  @else {
+    Selecione uma turma para exibir.
+  }
+</main>
+
+<router-outlet />
